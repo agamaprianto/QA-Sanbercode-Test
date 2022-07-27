@@ -200,8 +200,16 @@ class TestRegister(unittest.TestCase):
         self.assertIn('Nama atau password tidak valid', response_data)
         self.assertEqual(response_message, 'Tidak boleh mengandung symbol')
 
+    def tearDown(self): 
+        self.browser.close() 
 
-    def test_i_success_login(self): 
+
+class TestLogin(unittest.TestCase): 
+
+    def setUp(self): 
+        self.browser = webdriver.Chrome(ChromeDriverManager().install())
+
+    def test_a_success_login(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -220,7 +228,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('Welcome', response_data)
         self.assertEqual(response_message, 'Anda Berhasil Login')
 
-    def test_j_failed_login_with_dot_trick_email(self): 
+    def test_b_failed_login_with_dot_trick_email(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -239,7 +247,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('not found', response_data)
         self.assertEqual(response_message, 'Email atau Password Anda Salah')
 
-    def test_k_failed_login_with_special_password_character(self): 
+    def test_c_failed_login_with_special_password_character(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -258,7 +266,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('Password tidak valid', response_data)
         self.assertEqual(response_message, 'Tidak boleh mengandung symbol')
 
-    def test_l_failed_login_with_incorrect_email(self): 
+    def test_d_failed_login_with_incorrect_email(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -277,7 +285,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('Email tidak valid', response_data)
         self.assertEqual(response_message, 'Cek kembali email anda')
 
-    def test_m_failed_login_with_incorrect_password(self): 
+    def test_e_failed_login_with_incorrect_password(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -296,7 +304,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('not found', response_data)
         self.assertEqual(response_message, 'Email atau Password Anda Salah')
 
-    def test_n_failed_login_with_empty_email(self): 
+    def test_f_failed_login_with_empty_email(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -315,7 +323,7 @@ class TestRegister(unittest.TestCase):
         self.assertIn('Email tidak valid', response_data)
         self.assertEqual(response_message, 'Cek kembali email anda')
 
-    def test_o_failed_login_with_empty_password(self): 
+    def test_g_failed_login_with_empty_password(self): 
         # steps
         browser = self.browser #buka web browser
         browser.get("http://barru.pythonanywhere.com/daftar") # buka situs
@@ -334,12 +342,8 @@ class TestRegister(unittest.TestCase):
         self.assertIn('not found', response_data)
         self.assertEqual(response_message, 'Email atau Password Anda Salah')
 
-
-
-
-
     def tearDown(self): 
-        self.browser.close() 
+        self.browser.close()
 
 if __name__ == "__main__": 
     unittest.main()
