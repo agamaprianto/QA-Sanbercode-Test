@@ -8,8 +8,8 @@ Open Browser
 Add Employee
     Click Element    id=menu_pim_viewPimModule
     Click Element    id=menu_pim_addEmployee
-    Input Text    locator    Agam    
-    Input Text    locator    apri  
-    Input Text    locator    anto
-    Input Text    locator    0101
-    Click Element    locator
+    Input Text    id=firstName    Agam    
+    Input Text    id=middleName    apri  
+    Input Text    id=lastName    anto
+    Input Text    id=employeeId    0101
+    Click Element    id=btnSave

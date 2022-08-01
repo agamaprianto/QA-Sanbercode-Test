@@ -6,6 +6,6 @@ Resource        keyword.robot
 Open Browser
     TC_Login
 Update Status
-    Click Element    locator
-    Input Text    locator    text
-    Click Element    locator
+    Click Element    id=menu_buzz_viewBuzz
+    Input Text    id=createPost_content    QA Sanbercode
+    Click Element    id=postSubmitBtn
