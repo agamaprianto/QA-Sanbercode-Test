@@ -1,0 +1,36 @@
+>steps create user
+klik btn admin
+klik dropdown User Management "User"
+klik btn add
+klik dropdown user role "ESS"
+input employee name "Admin A"
+input username "agam123"
+klik dropdown "Enable"
+input password "agam12345"
+input confirm password "agam12345"
+klik btn save
+--DROPDOWN BELUM SELESAI--
+
+
+>steps find user
+klik btn admin
+klik dropdown User Management "User"
+input Username "agam123"
+klik dropdown User Role "ESS"
+input Employee Name "Admin A"
+klik dropdown "Enable"
+klik btn Search
+--DROPDOWN BELUM SELESAI--
+
+>steps create Job Title
+klik btn admin
+klik dropdown Job "Job Title"
+klik btn Add
+input Job Title "Testing"
+input Job Description "Test 01" *optional
+input Note "Test 02" *optional
+klik btn Save
+--SELESAI-- tinggal buat variabelnya
+
+--selector--
+//option[contains(text(),'ESS')]

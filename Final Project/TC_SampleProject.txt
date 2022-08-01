@@ -1,0 +1,123 @@
+TC_Admin
+> Create User pada menu Admin (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Admin
+3. klik btn Add
+4. klik dropdown menu user role pilih "ESS"
+5. inputkan employee name "Admin A"
+6. inputkan username "agam123"
+7. klik dropdown menu status pilih "Enabled"
+8. inputkan password "agam12345"
+9. inputkan konfirmasi password "agam12345"
+10. klik btn Save
+
+TC_PIM
+> Add Employee pada menu PIM (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn PIM
+3. klik btn Add Employee
+4. inputkan first name "Agam"
+5. inputkan middle name "apri"
+6. inputkan last name "anto"
+7. inputkan employee id "0101"
+8. klik btn save
+
+TC_Leave
+> Add Assign Leave pada menu Leave (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Leave
+3. klik btn Assign Leave
+4. inputkan employee name "agam123"
+5. klik dropdown Leave Type pilih "US - Personal"
+6. klik calender pada menu from date, pilih tanggal "1 Agustus 2022"
+7. klik calender pada menu to date, pilih tanggal "5 Agustus 2022"
+8. inputkan komentar "test 05"
+9. klik btn Assign
+
+
+TC_Time
+> Add Project pada menu Time (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Time
+3. klik dropdown project indo pilih "Projects"
+4. klik add
+5. klik btn add customer
+6. inputkan nama "agam" dan deskripsi "test 01"
+7. klik btn save
+8. inputkan nama "agam123"
+9. inputkan project admin "Admin A"
+10. inputkan deskripsi "test QA"
+11. klik btn save
+
+TC_Recruitment
+> Add Vacancies pada menu Recruitment (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Recruitment 
+3. klik btn Vacancies 
+4. klik btn Add
+5. klik dropdown job title pilih "Automation Tester"
+6. input Vacancy name "QA Tester"
+7. input hiring manager "Admin A"
+8. input number of positions "3"
+9. input description "Test 04"
+10 klik check box active
+11. klik btn save
+
+TC_My_Info
+> Edit Personal Details pada menu MyInfo (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn My Info 
+3. klik btn Edit
+4. input Driver's License Number "31730504971000"
+5. input SSN number "123456789"
+6. input Nick Name "agamapri"
+7. klik btn save 
+
+TC_Performance
+> Create Key Performance Indikator pada menu Performance (Positif)
+> Steps:
+1. Login wtih valid username dan password
+2. klik btn Performance
+3. klik dropdown menu Configure role pilih "KPIs"
+4. klik btn Add
+6. klik dropdown menu Job Title pilih "Automation Tester"
+5. inputkan Key Performance Indicator "Testing with robot framework"
+6. inputkan minimum rating "0"
+7. inputkan mazimum rating "100"
+8. klik btn Save
+
+TC_Directory
+> Search Directory pada menu Directory (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Directory 
+3. input name directory "Admin A"
+4. klik dropdown Job Title pilih "Automation Tester"
+5. klik dropdown Location pilih "Indonesia"
+6. klik btn Search
+
+TC_Maintenance
+> Download Personal Data pada menu Maintenance (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Maintenance
+3. klik btn Access Records
+4. input verify password "agam123"
+5. klik btn Verify
+6. inputkan employee name "Admin A"
+7. klik btn Search
+8. klik Download
+
+TC_Buzz
+> Update Status pada menu Buzz (Positif)
+> Steps:
+1. Login dengan valid username dan password
+2. klik btn Buzz
+3. input status "QA Sanbercode"
+4. klik btn Post
