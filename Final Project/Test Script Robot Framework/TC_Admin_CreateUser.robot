@@ -11,11 +11,11 @@ Create User
     Click Element    ${dropdownUser}
     Click Element    ${btnAdd}
     Click Element    id=systemUser_userType
-    # Click Element    selected=selected
+    Click Element    //option[contains(text(),'Admin')]
     Input Text       ${EmployeeNameId}               ${EmployeeName}
     Input Text       ${UsernameId}                   ${UserNameAdd}
     Click Element    id=systemUser_status
-    # Click Element    value=1
+    Click Element    //option[contains(text(),'Disabled')]
     Input Text       ${PasswordId}                   ${Password}
     Input Text       ${ConfirmPasswordId}            ${Password}
-    Click Element    ${btnSave}
+    Click Element    //input[@id='btnSave']
