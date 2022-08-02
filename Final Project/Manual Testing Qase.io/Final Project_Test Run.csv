@@ -1,0 +1,301 @@
+case_id,title,suite,suite_id,assignee,time_spent_ms,status,finish_time,steps,steps_input_data,steps_expected_result,steps_status,comment,priority,severity,automation,type,tags,step_comments,case_parameter
+1,"Test Login",Login,1,"agam aprianto",25000,Passed,"2022-08-02 15:31:53","1. Open Browser url:https://opensource-demo.orangehrmlive.com/index.php/auth/login
+2. input username
+3. input password
+4. click btn login
+","1. 
+2. Admin
+3. admin123
+4. 
+","1. browser can opened
+2. 
+3. 
+4. display dashboard, user sucsess login
+",,,High,Major,"To be automated",Functional,,,
+2,"create user","Admin Menu",2,"agam aprianto",2000,Passed,"2022-08-02 15:31:56","1. Login with valid username & password
+2. Click btn Admin
+3. Click btn Add
+4. Click dropdown menu user role
+5. Input employee name
+6. Input username
+7. Click dropdown menu status
+8. Input password
+9. Input password confirmation
+10. Click btn Save
+","1. username: Admin
+password: admin123
+2. 
+3. 
+4. choose ""ESS""
+5. Admin A
+6. agam123
+7. choose ""Enabled""
+8. agam12345
+9. agam12345
+10. 
+","1. sucsess login with valid username & password
+2. display admin menu
+3. display add user menu
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. user has been created successfully
+",,,High,Major,"To be automated",Functional,,,
+3,"Add Employee","PIM Menu",3,"agam aprianto",1000,Passed,"2022-08-02 15:31:58","1. Login with valid username dan password
+2. Click btn PIM
+3. Click btn Add Employee
+4. Input first name
+5. Input middle name
+6. Input last name
+7. Input employee id
+8. Click btn save
+","1. user already has an account 
+username: agam123 Password: agam12345
+2. 
+3. 
+4. Agam
+5. apri
+6. anto
+7. 0101
+8. 
+","1. sucsess login with valid username & password
+2. display PIM menu
+3. display Employee menu
+4. 
+5. 
+6. 
+7. 
+8. employee has been created successfully
+",,,High,Major,"To be automated",Functional,,,
+4,"Add Assign Leave","Leave Menu",4,"agam aprianto",1000,Passed,"2022-08-02 15:32:00","1. Login with valid username dan password
+2. Click btn Leave
+3. Click btn Assign Leave
+4. Input employee name
+5. Click dropdown Leave Type
+6. Click calender on from date menu
+7. Click calender on to date menu,
+8. Input comment
+9. Click btn Assign
+","1. user already has an account 
+username: agam123 Password: agam12345
+2. 
+3. 
+4. agam123
+5. choose US - Personal
+6. choose ""1 Agustus 2022""
+7. choose ""5 Agustus 2022""
+8. test 05
+9. 
+","1. sucsess login with valid username & password
+2. display Leave menu
+3. display Assign Leave menu
+4. 
+5. 
+6. 
+7. 
+8. 
+9. assigned has been created successfully
+",,,High,Major,"To be automated",Functional,,,
+5,"Add Project","Time Menu",5,"agam aprianto",1000,Passed,"2022-08-02 15:32:02","1. Login with valid username dan password
+2. Click btn Time
+3. Click dropdown project indo
+4. Click add
+5. Click btn add customer
+6. Input name & deskripsi
+7. Click btn save
+8. Input name
+9. Input project admin
+10. Input description
+11. Click btn save
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. choose ""Projects""
+4. 
+5. 
+6. name: agam
+description: test01
+7. 
+8. agam123
+9. Admin A
+10. test QA
+11. 
+","1. sucsess login with valid username & password
+2. display Time menu
+3. display Projects menu
+4. display Add Projects menu
+5. display Add Customer menu
+6. 
+7. back to Add Projects menu
+8. 
+9. 
+10. 
+11. project has been successfully
+",,,High,Major,"To be automated",Functional,,,
+6,"Add Vacancies",Recruitment,6,"agam aprianto",1000,Passed,"2022-08-02 15:32:04","1. Login with valid username dan password
+2. Click btn Recruitment
+3. Click btn Vacancies
+4. Click btn Add
+5. Click dropdown job title
+6. Input Vacancy name
+7. Input hiring manager
+8. Input number of positions
+9. Input description
+10. Click check box active
+11. Click btn save
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. 
+4. 
+5. choose ""Automation Tester""
+6. QA Tester
+7. Admin A
+8. 3
+9. Test 04
+10. 
+11. 
+","1. sucsess login with valid username & password
+2. display Candidates menu
+3. display Vacanies menu
+4. display Job Vacancy menu
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. vacancies has been successfully
+",,,High,Major,"To be automated",Functional,,,
+7,"Edit Personal Details","My Info Menu",7,"agam aprianto",1000,Passed,"2022-08-02 15:32:06","1. Login with valid username dan password
+2. Click btn My Info
+3. Click btn Edit
+4. Input Driver's License Number
+5. Input SSN number
+6. Input Nick Name
+7. Click btn save
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. 
+4. 31730504971000
+5. 123456789
+6. agamapri
+7. 
+","1. sucsess login with valid username & password
+2. display Information Personal menu
+3. display Personal Details menu
+4. 
+5. 
+6. 
+7. personal details has been saved successfully
+",,,High,Major,"To be automated",Functional,,,
+8,"Create Key Performance Indikator","Performance Menu",8,"agam aprianto",1000,Passed,"2022-08-02 15:32:08","1. Login wtih valid username dan password
+2. Click btn Performance
+3. Click dropdown menu Configure role
+4. Click btn Add
+5. Click dropdown menu Job Title
+6. input Key Performance Indicator
+7. input minimum rating
+8. input mazimum rating
+9. Click btn Save
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. choose ""KPIs""
+4. 
+5. choose ""Automation Tester""
+6. Testing with robot framework
+7. 0
+8. 100
+9. 
+","1. sucsess login with valid username & password
+2. display Performance menu
+3. 
+4. display key Performance Indikator menu
+5. 
+6. 
+7. 
+8. 
+9. Key Performance Indikator has been created saveed successfully
+",,,High,Major,"To be automated",Functional,,,
+12,"Check Timesheet","Dashboard Menu",9,"agam aprianto",1000,Passed,"2022-08-02 15:32:10","1. Login with valid username dan password
+2. Click btn Dashboard
+3. Click btn Timesheets
+4. input employee name
+5. Click btn View
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. 
+4. Admin A
+5. 
+","1. sucsess login with valid username & password
+2. display Dashboard menu
+3. display Timesheets menu
+4. 
+5. display No timesheets menu
+",,,High,Major,"To be automated",Functional,,,
+9,"Search Directory","Directory Menu",10,"agam aprianto",1000,Passed,"2022-08-02 15:32:11","1. Login with valid username dan password
+2. Click btn Directory
+3. Input name directory
+4. Click dropdown Job Title
+5. Click dropdown Location
+6. Click btn Search
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. Admin A
+4. choose ""Automation Tester""
+5. choose ""Indonesia""
+6. 
+","1. sucsess login with valid username & password
+2. display search Directory menu
+3. 
+4. 
+5. 
+6. display directory search results
+",,,High,Major,"To be automated",Functional,,,
+10,"Download Personal Data","Maintenance Menu",11,"agam aprianto",1000,Passed,"2022-08-02 15:32:13","1. Login with valid username dan password
+2. Click btn Maintenance
+3. Click btn Access Records
+4. input verify password
+5. klik btn Verify
+6. inputkan employee name
+7. klik btn Search
+8. klik btn Download
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. 
+4. agam123
+5. 
+6. Admin A
+7. 
+8. 
+","1. sucsess login with valid username & password
+2. display purge employee reports menu
+3. display download personal data menu
+4. 
+5. display download personal data menu
+6. 
+7. display the table you are search
+8. personal employee sucsess download
+",,,High,Major,"To be automated",Functional,,,
+11,"Update Status","Buzz Menu",12,"agam aprianto",1000,Passed,"2022-08-02 15:32:15","1. Login with valid username dan password
+2. Click btn Buzz
+3. Input status
+4. Click btn Post
+","1. user already has an account
+username: agam123 Password: agam12345
+2. 
+3. QA Sanbercode
+4. 
+","1. sucsess login with valid username & password
+2. show all posts
+3. 
+4. appears the post created
+",,,High,Major,"To be automated",Functional,,,

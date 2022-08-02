@@ -92,6 +92,15 @@ TC_Performance
 7. inputkan mazimum rating "100"
 8. klik btn Save
 
+TC_Dashboard
+> Check Timesheet menu Dashboard
+> Steps:
+1. Login wtih valid username dan password
+2. klik btn Dashboard
+3. klik btn Timesheets
+4. input employee name "Admin A"
+5. klik btn View
+
 TC_Directory
 > Search Directory pada menu Directory (Positif)
 > Steps:
