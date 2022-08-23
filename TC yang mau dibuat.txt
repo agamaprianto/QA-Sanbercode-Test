@@ -1,0 +1,11 @@
+TC_Admin_AddJobTitle
+TC_Admin_AddPayGrades
+TC_Admin_AddEmployeeStatus
+TC_Admin_AddJobCategories
+TC_Admin_AddWorkShifts
+TC_Admin_AddLocation
+TC_Admin_AddSkills
+TC_Admin_AddEducation
+TC_Admin_AddLicenses
+TC_Admin_AddLanguages
+TC_Admin_AddMemberships

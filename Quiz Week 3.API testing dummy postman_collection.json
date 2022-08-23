@@ -1,0 +1,1974 @@
+{
+	"info": {
+		"_postman_id": "ea010e6f-846f-4111-9e0e-a6aa0f30c67a",
+		"name": "Quiz Week 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22125210"
+	},
+	"item": [
+		{
+			"name": "Registrasi",
+			"item": [
+				{
+					"name": "User Register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": {\r\n    \"data\": {\r\n      \"id\": 261,\r\n      \"username\": \"agam@gmail.com\",\r\n      \"nama\": \"agam123\",\r\n      \"otp\": \"6382\",\r\n      \"otpExpiredDate\": \"2022-07-24T01:02:09.771+00:00\",\r\n      \"fileName\": null,\r\n      \"urlFileName\": \"\",\r\n      \"roles\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"authorities\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"message\": \"sukses\",\r\n    \"status\": \"200\"\r\n  },\r\n  \"message\": \"sukses\",\r\n  \"status\": \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register?email=apri@gm.com&username=apri123&password=apri123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "apri@gm.com"
+								},
+								{
+									"key": "username",
+									"value": "apri123"
+								},
+								{
+									"key": "password",
+									"value": "apri123"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Register with existing email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"data\": {\r\n      \"id\": 261,\r\n      \"username\": \"agam@gmail.co.id\",\r\n      \"nama\": \"agam123\",\r\n      \"otp\": \"7362\",\r\n      \"otpExpiredDate\": \"2022-07-24T01:02:09.771+00:00\",\r\n      \"fileName\": null,\r\n      \"urlFileName\": \"\",\r\n      \"roles\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"authorities\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"message\": \"sukses\",\r\n    \"status\": \"200\"\r\n  },\r\n  \"message\": \"sukses\",\r\n  \"status\": \"200\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://myappventure-api.herokuapp.com/api/user/register?email=agamap@gmail.com&username=agam123456&password=agam123",
+									"protocol": "https",
+									"host": [
+										"myappventure-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "agamap@gmail.com"
+										},
+										{
+											"key": "username",
+											"value": "agam123456"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 05:49:51 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email sudah ada\",\n    \"status\": \"404\"\n}"
+						},
+						{
+							"name": "User Register with incorrect email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"data\": {\r\n      \"id\": 261,\r\n      \"username\": \"agam@gmail.com\",\r\n      \"nama\": \"agam123\",\r\n      \"otp\": \"6382\",\r\n      \"otpExpiredDate\": \"2022-07-24T01:02:09.771+00:00\",\r\n      \"fileName\": null,\r\n      \"urlFileName\": \"\",\r\n      \"roles\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"authorities\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"message\": \"sukses\",\r\n    \"status\": \"200\"\r\n  },\r\n  \"message\": \"sukses\",\r\n  \"status\": \"200\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://myappventure-api.herokuapp.com/api/user/register?email=agamapgmail.com&username=apri123&password=agam123",
+									"protocol": "https",
+									"host": [
+										"myappventure-api",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "agamapgmail.com"
+										},
+										{
+											"key": "username",
+											"value": "apri123"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:19:15 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"Email Tidak Valid\",\n        \"status\": \"400\"\n    },\n    \"message\": \"sukses\",\n    \"status\": \"200\"\n}"
+						},
+						{
+							"name": "User Register with password cannot be less than 6 characters",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"data\": {\r\n      \"id\": 261,\r\n      \"username\": \"agam@gmail.com\",\r\n      \"nama\": \"agam123\",\r\n      \"otp\": \"6382\",\r\n      \"otpExpiredDate\": \"2022-07-24T01:02:09.771+00:00\",\r\n      \"fileName\": null,\r\n      \"urlFileName\": \"\",\r\n      \"roles\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"authorities\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"message\": \"sukses\",\r\n    \"status\": \"200\"\r\n  },\r\n  \"message\": \"sukses\",\r\n  \"status\": \"200\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/register?email=agamap2@gmail.com&username=agam123455&password=agam",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "agamap2@gmail.com"
+										},
+										{
+											"key": "username",
+											"value": "agam123455"
+										},
+										{
+											"key": "password",
+											"value": "agam"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:24:53 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"message\": \"Password Tidak Boleh Kurang Dari 6 karakter\",\n        \"status\": \"400\"\n    },\n    \"message\": \"sukses\",\n    \"status\": \"200\"\n}"
+						},
+						{
+							"name": "User Register with dot trik email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"data\": {\r\n      \"id\": 261,\r\n      \"username\": \"agam@gmail.com\",\r\n      \"nama\": \"agam123\",\r\n      \"otp\": \"6382\",\r\n      \"otpExpiredDate\": \"2022-07-24T01:02:09.771+00:00\",\r\n      \"fileName\": null,\r\n      \"urlFileName\": \"\",\r\n      \"roles\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"authorities\": [\r\n        {\r\n          \"id\": 3,\r\n          \"name\": \"ROLE_USER\",\r\n          \"type\": \"user_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 13,\r\n              \"name\": \"role_user_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 14,\r\n              \"name\": \"role_user_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 15,\r\n              \"name\": \"role_user_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 16,\r\n              \"name\": \"role_user_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 17,\r\n              \"name\": \"role_user_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 18,\r\n              \"name\": \"role_user_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 4,\r\n          \"name\": \"ROLE_READ\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 19,\r\n              \"name\": \"role_read_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 20,\r\n              \"name\": \"role_read_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 21,\r\n              \"name\": \"role_read_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 22,\r\n              \"name\": \"role_read_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 23,\r\n              \"name\": \"role_read_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 24,\r\n              \"name\": \"role_read_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"id\": 5,\r\n          \"name\": \"ROLE_WRITE\",\r\n          \"type\": \"oauth_role\",\r\n          \"rolePaths\": [\r\n            {\r\n              \"id\": 25,\r\n              \"name\": \"role_write_get\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"GET\"\r\n            },\r\n            {\r\n              \"id\": 26,\r\n              \"name\": \"role_write_put\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PUT\"\r\n            },\r\n            {\r\n              \"id\": 27,\r\n              \"name\": \"role_write_post\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"POST\"\r\n            },\r\n            {\r\n              \"id\": 28,\r\n              \"name\": \"role_write_patch\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"PATCH\"\r\n            },\r\n            {\r\n              \"id\": 29,\r\n              \"name\": \"role_write_delete\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"DELETE\"\r\n            },\r\n            {\r\n              \"id\": 30,\r\n              \"name\": \"role_write_options\",\r\n              \"pattern\": \"^/.*\",\r\n              \"method\": \"OPTIONS\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"message\": \"sukses\",\r\n    \"status\": \"200\"\r\n  },\r\n  \"message\": \"sukses\",\r\n  \"status\": \"200\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/register?email=agam.ap@gmail.com&username=agam123455&password=agam123",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "agam.ap@gmail.com"
+										},
+										{
+											"key": "username",
+											"value": "agam123455"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:26:51 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"data\": {\n            \"id\": 359,\n            \"username\": \"agam.ap@gmail.com\",\n            \"nama\": \"agam123455\",\n            \"otp\": \"1015\",\n            \"otpExpiredDate\": \"2022-07-24T14:26:51.903+00:00\",\n            \"fileName\": null,\n            \"urlFileName\": \"\",\n            \"roles\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"ROLE_USER\",\n                    \"type\": \"user_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 13,\n                            \"name\": \"role_user_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 14,\n                            \"name\": \"role_user_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 15,\n                            \"name\": \"role_user_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 16,\n                            \"name\": \"role_user_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 17,\n                            \"name\": \"role_user_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 18,\n                            \"name\": \"role_user_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"ROLE_READ\",\n                    \"type\": \"oauth_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 19,\n                            \"name\": \"role_read_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 20,\n                            \"name\": \"role_read_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 21,\n                            \"name\": \"role_read_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 22,\n                            \"name\": \"role_read_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 23,\n                            \"name\": \"role_read_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 24,\n                            \"name\": \"role_read_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"ROLE_WRITE\",\n                    \"type\": \"oauth_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 25,\n                            \"name\": \"role_write_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 26,\n                            \"name\": \"role_write_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 27,\n                            \"name\": \"role_write_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 28,\n                            \"name\": \"role_write_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 29,\n                            \"name\": \"role_write_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 30,\n                            \"name\": \"role_write_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                }\n            ],\n            \"authorities\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"ROLE_USER\",\n                    \"type\": \"user_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 13,\n                            \"name\": \"role_user_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 14,\n                            \"name\": \"role_user_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 15,\n                            \"name\": \"role_user_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 16,\n                            \"name\": \"role_user_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 17,\n                            \"name\": \"role_user_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 18,\n                            \"name\": \"role_user_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"ROLE_READ\",\n                    \"type\": \"oauth_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 19,\n                            \"name\": \"role_read_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 20,\n                            \"name\": \"role_read_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 21,\n                            \"name\": \"role_read_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 22,\n                            \"name\": \"role_read_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 23,\n                            \"name\": \"role_read_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 24,\n                            \"name\": \"role_read_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 5,\n                    \"name\": \"ROLE_WRITE\",\n                    \"type\": \"oauth_role\",\n                    \"rolePaths\": [\n                        {\n                            \"id\": 25,\n                            \"name\": \"role_write_get\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"GET\"\n                        },\n                        {\n                            \"id\": 26,\n                            \"name\": \"role_write_put\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PUT\"\n                        },\n                        {\n                            \"id\": 27,\n                            \"name\": \"role_write_post\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"POST\"\n                        },\n                        {\n                            \"id\": 28,\n                            \"name\": \"role_write_patch\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"PATCH\"\n                        },\n                        {\n                            \"id\": 29,\n                            \"name\": \"role_write_delete\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"DELETE\"\n                        },\n                        {\n                            \"id\": 30,\n                            \"name\": \"role_write_options\",\n                            \"pattern\": \"^/.*\",\n                            \"method\": \"OPTIONS\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"message\": \"sukses\",\n        \"status\": \"200\"\n    },\n    \"message\": \"sukses\",\n    \"status\": \"200\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send OTP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"email\": \"agamap@gmail.com\",\r\n  \"username\": \"agam12345\",\r\n  \"password\": \"agam123\",\r\n  \"fileName\": \"null\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/send-otp?id=1&email=apri@gm.com&username=apri123&password=apri123&filename=null",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"send-otp"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "email",
+									"value": "apri@gm.com"
+								},
+								{
+									"key": "username",
+									"value": "apri123"
+								},
+								{
+									"key": "password",
+									"value": "apri123"
+								},
+								{
+									"key": "filename",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send OTP with incorrect email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"email\": \"agamap2@gmail.com\",\r\n  \"username\": \"agam123456\",\r\n  \"password\": \"agam123\",\r\n  \"fileName\": \"null\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/send-otp?id=1&email=agamap@gmail.com&username=agam123456&password=agam123&filename=null",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"send-otp"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "email",
+											"value": "agamap@gmail.com"
+										},
+										{
+											"key": "username",
+											"value": "agam123456"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										},
+										{
+											"key": "filename",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:29:21 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email not found\",\n    \"status\": \"404\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Verification Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/verifikasi/1923",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"verifikasi",
+								"1923"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Verification Token with incorrect otp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user/verifikasi/4298",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"verifikasi",
+										"4298"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:34:09 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OTP tidak ditemukan\",\n    \"status\": \"400\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"apri@gm.com\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"apri@gm.com\",\r\n  \"password\": \"apri123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user-login/login?username=apri@gm.com&password=apri123",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user-login",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "apri@gm.com"
+								},
+								{
+									"key": "password",
+									"value": "apri123"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Login with incorrect password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"agamap@gmail.com\",\r\n  \"password\": \"agam123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user-login/login?username=agamap@gmail.com&password=agam123",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user-login",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "agamap@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:10:16 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password Salah\",\n    \"status\": \"400\"\n}"
+						},
+						{
+							"name": "User Login with incorrect username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"agamap@gmail.co.id\",\r\n  \"password\": \"agam321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user-login/login?username=agamap@gmail.com&password=agam123",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user-login",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "agamap@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:12:21 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user not found\",\n    \"status\": \"404\"\n}"
+						},
+						{
+							"name": "User Login with dot trick email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"agam.ap@gmail.com\",\r\n  \"password\": \"agam321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user-login/login?username=agamap@gmail.com&password=agam123",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user-login",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "agamap@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "agam123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:14:52 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user not found\",\n    \"status\": \"404\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lupa Password",
+			"item": [
+				{
+					"name": "Lupa Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"apri@gm.com\",\r\n  \"otp\": \"7362\",\r\n  \"newPassword\": \"apri321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forget-password/lupa-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forget-password",
+								"lupa-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lupa Password with incorrect email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"apri@gm.co\",\r\n  \"otp\": \"7362\",\r\n  \"newPassword\": \"apri321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/lupa-password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"lupa-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 18:59:23 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email not found\",\n    \"status\": \"400\"\n}"
+						},
+						{
+							"name": "Lupa Password with dot trick email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"ap.ri@gm.com\",\r\n  \"otp\": \"6382\",\r\n  \"newPassword\": \"apri321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/lupa-password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"lupa-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 19:01:30 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email not found\",\n    \"status\": \"400\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Password Baru",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"apri@gm.com\",\r\n  \"otp\": \"6382\",\r\n  \"newPassword\": \"agam321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forget-password/lupa-password-baru?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forget-password",
+								"lupa-password-baru"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Password Baru with incorrect token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"agamap@gmail.com\",\r\n  \"otp\": \"7362\",\r\n  \"newPassword\": \"agam321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/lupa-password-baru",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"lupa-password-baru"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jul 2022 19:02:26 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token not valid\",\n    \"status\": \"400\"\n}"
+						},
+						{
+							"name": "Password Baru with incorrect username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"apri@gm.co\",\r\n  \"otp\": \"6382\",\r\n  \"newPassword\": \"agam321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/lupa-password-baru?token={{token}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"lupa-password-baru"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jul 2022 07:09:03 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token not valid\",\n    \"status\": \"400\"\n}"
+						},
+						{
+							"name": "Password Baru",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"apri@gm.com\",\r\n  \"otp\": \"6382\",\r\n  \"newPassword\": \"agam\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/lupa-password-baru?token={{token}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"lupa-password-baru"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jul 2022 07:09:03 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token not valid\",\n    \"status\": \"400\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cek Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"agamap@gmail.com\",\r\n  \"otp\": \"7362\",\r\n  \"newPassword\": \"agam321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/forget-password/check-token?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"forget-password",
+								"check-token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cek Token with invalid token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"agamap@gmail.com\",\r\n  \"otp\": \"7362\",\r\n  \"newPassword\": \"agam321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/forget-password/check-token?token={{token}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"forget-password",
+										"check-token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{token}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000 ; includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jul 2022 07:09:25 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token not valid\",\n    \"status\": \"400\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://myappventure-api.herokuapp.com/api/user/"
+		}
+	]
+}
